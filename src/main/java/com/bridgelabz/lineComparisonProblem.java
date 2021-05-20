@@ -19,10 +19,19 @@ public class lineComparisonProblem {
 
         Double line1 = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
         Double line2 = Math.sqrt((m2 - m1) * (m2 - m1) + (n2 - n1) * (n2 - n1));
-        if(line1.equals(line2)){
+
+        System.out.println("Line 1:"+line1);
+        System.out.println("Line 2:"+line2);
+
+        int compareValue = line1.compareTo(line2);
+
+        if(compareValue == 0){
             System.out.println("Both lines are equals");
-        }else {
-            System.out.println("Lines are not equals:");
+        }else if (compareValue < 0){
+            System.out.println("Line1 is less than line2 :");
+        }
+        else {
+            System.out.println("Line1 is greater than line2");
         }
 
     }
